@@ -1,61 +1,41 @@
 import copy
 
-zfactor=16
+zfactor=20
 azimuth=315
 
-dem1 = dict(\
-    name='dem',
-    prototype='datasource.storage',
-    storage_type='metacache',
-    stride=1,
-    root='./themes/bathymetry/cache/elevation',
-    )
+# elevation = dict(\
+#     name='dem',
+#     prototype='datasource.storage',
+#     storage_type='metacache',
+#     stride=1,
+#     root='./themes/bathymetry/cache/elevation',
+#     )
     
-dem1 = dict(\
-    name='elevation',
-    prototype='datasource.postgis',
-    server='postgresql://postgres:123456@172.26.183.198:5432/srtm30_new',
-    table='srtm30_3857',
-    cache=dict(prototype='metacache',
-               root='./themes/bathymetry/cache/elevation',
-               compress=True,
-               data_format='gtiff',
-               ),
+elevation = dict(\
+    prototype='datasource.dataset',
+    dataset_path='/Users/Kotaimen/proj/geodata/srtm30_new/gtiff/world.vrt',
+    cache= dict(prototype='metacache',
+         root='./themes/bathymetry/cache/elevation',
+         compress=True,
+         data_format='gtiff',
+         ),
 )
 
 
-dem2 = copy.deepcopy(dem1)
-dem3 = copy.deepcopy(dem1)
-dem4 = copy.deepcopy(dem1)
-dem5 = copy.deepcopy(dem1)
-
 diffuse = dict(\
-    name='diffuse',
     prototype='processing.hillshading',
     cache=None,
-    sources=(dem1,),
+    sources='elevation',
     zfactor=zfactor,
     scale=1,
     altitude=30,
     azimuth=azimuth,
     )
-    
-detail = dict(\
-    name='diffuse',
-    prototype='processing.hillshading',
-    cache=None,
-    sources=(dem2,),
-    zfactor=1,
-    scale=1,
-    altitude=40,
-    azimuth=azimuth,
-)
 
 specular = dict(\
-    name='specular',
     prototype='processing.hillshading',
     cache=None,
-    sources=(dem3,),
+    sources='elevation',
     zfactor=zfactor,
     scale=1,
     altitude=85,
@@ -63,53 +43,47 @@ specular = dict(\
     )
 
 color = dict(\
-    name='color',
     prototype='processing.colorrelief',
     cache=None,
-    sources=(dem4,),
+    sources='elevation',
     color_context='themes/bathymetry/hypsometric-map-ocean.txt',
     )
 
-
 composer = dict(\
-     name='imagemagick_composer',
      prototype='composite.imagemagick',
      cache=dict(prototype='metacache',
                root='./themes/bathymetry/cache/bathmetry',
                data_format='jpg',
                ),
-     sources=[diffuse, specular, color, detail, dem5],
+     sources=['diffuse', 'specular', 'color'],
      format='jpg',
      command=''' 
     $1 -fill grey50 -colorize 100%
-    ( $1 ) -compose blend -define compose:args=30% -composite
-    ( $4 -brightness-contrast +0%x+40% ) -compose blend -define compose:args=20% -composite    
-    ( $2 -gamma 4 ) -compose blend -define compose:args=50% -composite     
-    -brightness-contrast -15%x+2%
+    ( $1 ) -compose blend -define compose:args=55% -composite
+    ( $2 -gamma 3.1 ) -compose blend -define compose:args=45% -composite     
+    -brightness-contrast -15%x-2%
     -gamma 0.75
     $3 -compose overlay -composite
 #   -unsharp 2x1+0.3
-#   -adaptive-sharpen 2
-    -sharpen 0.6
-    -quality 85
+    -adaptive-sharpen 2
+#     -sharpen 0.6
+    -quality 100
      ''',
 
      )
 
-
-
 ROOT = dict(\
     metadata=dict(tag='world'),
-    pyramid=dict(levels=range(5, 9),
+    renderer='composer',    
+    pyramid=dict(levels=range(4, 10),
                  format='jpg',
-                 buffer=0,
+                 buffer=16,
                  envelope=(-180, -85, 180, 85),
-                 zoom=7,
-                 center=(0, 0),
+                 zoom=5,
+                 center=(126, 27),
                  ),
     cache=dict(prototype='filesystem',
                root='./themes/bathymetry/cache/export',
                data_format='jpg',
                ),
-    renderer=composer,
     )

@@ -2,28 +2,21 @@
 # Standard hill shading and gtiff tiles
 #
 
-
-
 # Default elevation, use PostGIS2 as data source
 elevation = dict(\
-    name='elevation',
-    prototype='datasource.postgis',
-    server='postgresql://postgres:123456@172.26.183.198:5432/srtm30_new',
-    table='srtm30_3857',
-    cache=
-    #None,
-    dict(prototype='metacache',
-               root='./themes/bathymetry/cache/elevation',
-               compress=True,
-               data_format='gtiff',
-               ),
+    prototype='datasource.dataset',
+    dataset_path='/Users/Kotaimen/proj/geodata/srtm30_new/gtiff/world.vrt',
+    cache= dict(prototype='metacache',
+         root='./themes/bathymetry/cache/elevation',
+         compress=True,
+         data_format='gtiff',
+         ),
 )
 
 # Simple relief for preview
 relief = dict(\
-    name='relief',
     prototype='processing.hillshading',
-    sources=(elevation,),
+    sources='elevation',
     zfactor=3,
     scale=1,
     altitude=45,
@@ -31,10 +24,9 @@ relief = dict(\
     )
 
 composer=dict(\
-    name='composer',
     prototype='composite.imagemagick',
     cache=None,
-    sources=[relief,],
+    sources=['relief',],
     format='png',
     command='''
     $1
@@ -43,13 +35,13 @@ composer=dict(\
     )
 
 ROOT = dict(\
-    renderer=composer,
+    renderer='composer',
     metadata=dict(tag='hills'),
     pyramid=dict(levels=range(6, 9),
                  envelope=(-180,-85,180,85),
                  zoom=7,
                  center=(0, 0),
                  format='png',
-                 buffer=16,
+                 buffer=0,
                  ),
 )
