@@ -35,9 +35,9 @@ composer=dict(\
     )
 
 ROOT = dict(\
-    renderer='composer',
+    renderer='elevation',
     metadata=dict(tag='hills'),
-    pyramid=dict(levels=range(6, 9),
+    pyramid=dict(levels=range(4, 8),
                  envelope=(-180,-85,180,85),
                  zoom=7,
                  center=(0, 0),
