@@ -1,10 +1,10 @@
-zfactor=24 # Reduce this when using high resolution data!
+zfactor=20 # Reduce this when using high resolution data!
 azimuth=345
 
 elevation = dict(\
     prototype='datasource.dataset',
     dataset_path='/Users/Kotaimen/proj/geodata/srtm30_new/gtiff/world.vrt',
-#     dataset_path='/Users/Kotaimen/proj/geodata/DEM-Tools-patch/source/ned100m/ned100m.vrt',
+#    dataset_path='/Users/Kotaimen/proj/geodata/DEM-Tools-patch/source/ned10m/ned10m.vrt',
     cache=dict(prototype='metacache',
         root='./themes/bathymetry/cache/elevation',
         compress=True,
@@ -68,13 +68,13 @@ composer=dict(\
     )
     
     ( 
-        $4 -brightness-contrast -5%x-10%
+        $4 -brightness-contrast +1%x-3%
     ) -compose overlay -composite
 
 #    -brightness-contrast +10%x-12%
-    -gamma 1.9
-#    -unsharp 0x1+0.2
-    -quality 90
+    -gamma 1.8
+#    -unsharp 0x1+0.3
+    -quality 75
     '''
     )
 
@@ -82,19 +82,20 @@ ROOT = dict(\
     renderer='composer',
     metadata=dict(tag='BlueMarble',
                   version='1.0',
-                  description='Blue Marble with Bathymetry and Shaded Relief',
-                  attribution='',
+                  description='Blue Marble with Bathymetry and Shaded Relief.',
+                  attribution='SRTM_new Bathymetry, NASA Blue Marble.',
                   ),
-    cache=dict(prototype='filesystem',
-               root='./themes/bathymetry/cache/export',
-               data_format='jpg',
-               simple=True
-               ),                  
+#    cache=dict(prototype='filesystem',
+#               root='./themes/bathymetry/cache/export',
+#               data_format='jpg',
+#               simple=True
+#               ),                  
+    cache=dict(prototype='mbtiles', database='./themes/bathymetry/cache/export.mbtiles'),
     pyramid=dict(levels=range(3, 8),
-                 envelope=(-180,-85,180,85),
+                 envelope=(-180,-75,180,75),
                  zoom=5,
                  center=(100, 30),
                  format='jpg',
-                 buffer=0,
+                 buffer=8,
                  ),
 )
