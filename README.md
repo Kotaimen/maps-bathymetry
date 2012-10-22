@@ -1,8 +1,9 @@
-
 Maps: Blue Marble
 =================
 
-Map theme using SRTM250 World Relief and NASA Blue Marble Next Generation
+Map theme using SRTM250 World Relief and NASA Blue Marble Next Generation.
+
+See http://tiles.mapbox.com/kotaimen/map/BlueMarbleBathymetry
 
 Bathymetry Data
 ===============
