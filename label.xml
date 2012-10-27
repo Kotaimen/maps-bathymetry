@@ -1,0 +1,2086 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map[]>
+<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" buffer-size="384" maximum-extent="-20037508.34,-20037508.34,20037508.34,20037508.34">
+
+<Parameters>
+  <Parameter name="bounds">-180,-85.0511,180,85.0511</Parameter>
+  <Parameter name="center">0,0,4</Parameter>
+  <Parameter name="format">png</Parameter>
+  <Parameter name="minzoom">2</Parameter>
+  <Parameter name="maxzoom">8</Parameter>
+  <Parameter name="name"><![CDATA[Marbles Labels]]></Parameter>
+  <Parameter name="description"><![CDATA[Bathymetry "Marble" Theme Labels]]></Parameter>
+</Parameters>
+
+
+<Style name="coastline" filter-mode="first" >
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <LineSymbolizer stroke="#fcecad" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <LineSymbolizer stroke="#fcecad" stroke-width="1" stroke-linejoin="round" stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>50000000</MinScaleDenominator>
+    <LineSymbolizer stroke="#fcecad" stroke-width="0.25" stroke-linejoin="round" stroke-linecap="butt" />
+  </Rule>
+</Style>
+<Layer name="coastline"
+  srs="+proj=longlat +ellps=WGS84 +no_defs">
+    <StyleName>coastline</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/MarbleLabel/layers/coastline/ne_10m_coastline.shp]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="island_coastline" filter-mode="first" >
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <LineSymbolizer stroke="#fcecad" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <LineSymbolizer stroke="#fcecad" stroke-width="1" stroke-linejoin="round" stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>50000000</MinScaleDenominator>
+    <LineSymbolizer stroke="#fcecad" stroke-width="0.25" stroke-linejoin="round" stroke-linecap="butt" />
+  </Rule>
+</Style>
+<Layer name="island_coastline"
+  srs="+proj=longlat +ellps=WGS84 +no_defs">
+    <StyleName>island_coastline</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/MarbleLabel/layers/island_coastline/ne_10m_minor_islands_coastline.shp]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="reefs" filter-mode="first" >
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <LineSymbolizer stroke-dasharray="1, 1" stroke="#80ffff" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <LineSymbolizer stroke-dasharray="1, 1" stroke="#80ffff" stroke-width="1" stroke-linejoin="round" stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>50000000</MinScaleDenominator>
+    <LineSymbolizer stroke-dasharray="1, 1" stroke="#80ffff" stroke-width="0.25" stroke-linejoin="round" stroke-linecap="butt" />
+  </Rule>
+</Style>
+<Layer name="reefs"
+  srs="+proj=longlat +ellps=WGS84 +no_defs">
+    <StyleName>reefs</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/MarbleLabel/layers/reefs/ne_10m_reefs.shp]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="geographylines" filter-mode="first" >
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <LineSymbolizer stroke-dasharray="4, 4" stroke="#cccccc" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <LineSymbolizer stroke-dasharray="4, 4" stroke="#cccccc" stroke-width="1" stroke-linejoin="round" stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>50000000</MinScaleDenominator>
+    <LineSymbolizer stroke-dasharray="4, 4" stroke="#cccccc" stroke-width="0.25" stroke-linejoin="round" stroke-linecap="butt" />
+  </Rule>
+</Style>
+<Layer name="geographylines"
+  srs="+proj=longlat +ellps=WGS84 +no_defs">
+    <StyleName>geographylines</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/MarbleLabel/layers/geographylines/ne_10m_geographic_lines.shp]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="land" filter-mode="first" >
+  <Rule>
+    <PolygonSymbolizer fill="#006400" />
+  </Rule>
+</Style>
+<Layer name="land"
+  status="off"
+  srs="+proj=longlat +ellps=WGS84 +no_defs">
+    <StyleName>land</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/MarbleLabel/layers/land/ne_10m_land.shp]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="island" filter-mode="first" >
+  <Rule>
+    <PolygonSymbolizer fill="#006400" />
+  </Rule>
+</Style>
+<Layer name="island"
+  status="off"
+  srs="+proj=longlat +ellps=WGS84 +no_defs">
+    <StyleName>island</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/MarbleLabel/layers/island/ne_10m_minor_islands.shp]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="boundary" filter-mode="first" >
+  <Rule>
+    <LineSymbolizer stroke="#cccccc" stroke-opacity="0.75" />
+  </Rule>
+</Style>
+<Layer name="boundary"
+  srs="+proj=longlat +ellps=WGS84 +no_defs">
+    <StyleName>boundary</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/MarbleLabel/layers/boundary/ne_10m_admin_0_boundary_lines_land.shp]]></Parameter>
+       <Parameter name="id"><![CDATA[boundary]]></Parameter>
+       <Parameter name="project"><![CDATA[MarbleLabel]]></Parameter>
+       <Parameter name="srs"><![CDATA[]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="geography_region" filter-mode="first" >
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([NameAlt] = '') and ([ScaleRank] &lt;= 1)</Filter>
+    <TextSymbolizer size="16" face-name="Avenir Next Demi Bold Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([NameAlt] = '') and ([ScaleRank] &lt;= 1)</Filter>
+    <TextSymbolizer size="16" face-name="Avenir Next Demi Bold Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([NameAlt] = '') and ([ScaleRank] &lt;= 1)</Filter>
+    <TextSymbolizer size="16" face-name="Avenir Next Demi Bold Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([NameAlt] = '') and ([ScaleRank] &lt;= 1)</Filter>
+    <TextSymbolizer size="16" face-name="Avenir Next Demi Bold Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([NameAlt] = '') and ([ScaleRank] &lt;= 1)</Filter>
+    <TextSymbolizer size="16" face-name="Avenir Next Demi Bold Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([NameAlt] = '') and ([ScaleRank] &lt;= 1)</Filter>
+    <TextSymbolizer size="16" face-name="Avenir Next Demi Bold Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([NameAlt] = '') and ([ScaleRank] &lt;= 1)</Filter>
+    <TextSymbolizer size="16" face-name="Avenir Next Demi Bold Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([NameAlt] = '') and ([ScaleRank] &lt;= 2)</Filter>
+    <TextSymbolizer size="16" face-name="Avenir Next Demi Bold Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([NameAlt] = '') and ([ScaleRank] &lt;= 2)</Filter>
+    <TextSymbolizer size="16" face-name="Avenir Next Demi Bold Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([NameAlt] = '') and ([ScaleRank] &lt;= 2)</Filter>
+    <TextSymbolizer size="16" face-name="Avenir Next Demi Bold Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([NameAlt] = '') and ([ScaleRank] &lt;= 2)</Filter>
+    <TextSymbolizer size="16" face-name="Avenir Next Demi Bold Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([NameAlt] = '') and ([ScaleRank] &lt;= 2)</Filter>
+    <TextSymbolizer size="16" face-name="Avenir Next Demi Bold Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([NameAlt] = '') and ([ScaleRank] &lt;= 2)</Filter>
+    <TextSymbolizer size="16" face-name="Avenir Next Demi Bold Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([NameAlt] = '') and ([ScaleRank] &lt;= 4) and ([ScaleRank] &gt;= 3)</Filter>
+    <TextSymbolizer size="14" face-name="Avenir Next Demi Bold Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([NameAlt] = '') and ([ScaleRank] &lt;= 4) and ([ScaleRank] &gt;= 3)</Filter>
+    <TextSymbolizer size="14" face-name="Avenir Next Demi Bold Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([NameAlt] = '') and ([ScaleRank] &lt;= 4) and ([ScaleRank] &gt;= 3)</Filter>
+    <TextSymbolizer size="14" face-name="Avenir Next Demi Bold Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([NameAlt] = '') and ([ScaleRank] &lt;= 4) and ([ScaleRank] &gt;= 3)</Filter>
+    <TextSymbolizer size="14" face-name="Avenir Next Demi Bold Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([NameAlt] = '') and ([ScaleRank] &lt;= 4) and ([ScaleRank] &gt;= 3)</Filter>
+    <TextSymbolizer size="14" face-name="Avenir Next Demi Bold Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([NameAlt] = '') and ([ScaleRank] &lt; 3)</Filter>
+    <TextSymbolizer size="16" face-name="Avenir Next Demi Bold Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([NameAlt] = '') and ([ScaleRank] &lt; 3)</Filter>
+    <TextSymbolizer size="16" face-name="Avenir Next Demi Bold Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([NameAlt] = '') and ([ScaleRank] &lt; 3)</Filter>
+    <TextSymbolizer size="16" face-name="Avenir Next Demi Bold Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([NameAlt] = '') and ([ScaleRank] &lt; 3)</Filter>
+    <TextSymbolizer size="16" face-name="Avenir Next Demi Bold Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([NameAlt] = '') and ([ScaleRank] &lt; 3)</Filter>
+    <TextSymbolizer size="16" face-name="Avenir Next Demi Bold Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([NameAlt] = '') and ([ScaleRank] &lt;= 4)</Filter>
+    <TextSymbolizer face-name="Arial Regular" size="10" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([NameAlt] = '') and ([ScaleRank] &lt;= 4)</Filter>
+    <TextSymbolizer face-name="Arial Regular" size="10" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([NameAlt] = '') and ([ScaleRank] &lt;= 4)</Filter>
+    <TextSymbolizer face-name="Arial Regular" size="10" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([NameAlt] = '') and ([ScaleRank] &lt;= 4)</Filter>
+    <TextSymbolizer face-name="Arial Regular" size="10" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([NameAlt] = '') and ([ScaleRank] &lt;= 4)</Filter>
+    <TextSymbolizer face-name="Arial Regular" size="10" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([NameAlt] = '') and ([ScaleRank] &gt;= 3) and ([ScaleRank] &lt; 5)</Filter>
+    <TextSymbolizer size="14" face-name="Avenir Next Demi Bold Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([NameAlt] = '') and ([ScaleRank] &gt;= 3) and ([ScaleRank] &lt; 5)</Filter>
+    <TextSymbolizer size="14" face-name="Avenir Next Demi Bold Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([NameAlt] = '') and ([ScaleRank] &gt;= 3) and ([ScaleRank] &lt; 5)</Filter>
+    <TextSymbolizer size="14" face-name="Avenir Next Demi Bold Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([NameAlt] = '') and ([ScaleRank] &gt;= 3) and ([ScaleRank] &lt; 5)</Filter>
+    <TextSymbolizer size="14" face-name="Avenir Next Demi Bold Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([NameAlt] = '') and ([ScaleRank] &lt;= 6) and ([ScaleRank] &gt;= 5)</Filter>
+    <TextSymbolizer size="12" face-name="Avenir Next Medium Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([NameAlt] = '') and ([ScaleRank] &lt;= 6) and ([ScaleRank] &gt;= 5)</Filter>
+    <TextSymbolizer size="12" face-name="Avenir Next Medium Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([NameAlt] = '') and ([ScaleRank] &lt;= 6) and ([ScaleRank] &gt;= 5)</Filter>
+    <TextSymbolizer size="12" face-name="Avenir Next Medium Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([NameAlt] = '') and ([ScaleRank] &lt;= 6) and ([ScaleRank] &gt;= 5)</Filter>
+    <TextSymbolizer size="12" face-name="Avenir Next Medium Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([NameAlt] = '') and ([ScaleRank] &lt;= 6)</Filter>
+    <TextSymbolizer face-name="Arial Regular" size="10" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([NameAlt] = '') and ([ScaleRank] &lt;= 6)</Filter>
+    <TextSymbolizer face-name="Arial Regular" size="10" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([NameAlt] = '') and ([ScaleRank] &lt;= 6)</Filter>
+    <TextSymbolizer face-name="Arial Regular" size="10" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([NameAlt] = '') and ([ScaleRank] &lt;= 6)</Filter>
+    <TextSymbolizer face-name="Arial Regular" size="10" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([NameAlt] = '') and ([ScaleRank] &lt;= 8) and ([ScaleRank] &gt;= 5)</Filter>
+    <TextSymbolizer size="12" face-name="Avenir Next Medium Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([NameAlt] = '') and ([ScaleRank] &lt;= 8) and ([ScaleRank] &gt;= 5)</Filter>
+    <TextSymbolizer size="12" face-name="Avenir Next Medium Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([NameAlt] = '') and ([ScaleRank] &lt;= 8) and ([ScaleRank] &gt;= 5)</Filter>
+    <TextSymbolizer size="12" face-name="Avenir Next Medium Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([NameAlt] = '') and ([ScaleRank] &lt;= 8)</Filter>
+    <TextSymbolizer face-name="Arial Regular" size="10" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([NameAlt] = '') and ([ScaleRank] &lt;= 8)</Filter>
+    <TextSymbolizer face-name="Arial Regular" size="10" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([NameAlt] = '') and ([ScaleRank] &lt;= 8)</Filter>
+    <TextSymbolizer face-name="Arial Regular" size="10" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &lt;= 99) and ([NameAlt] = '') and ([ScaleRank] &gt;= 5)</Filter>
+    <TextSymbolizer size="12" face-name="Avenir Next Medium Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &lt;= 99) and ([NameAlt] = '') and ([ScaleRank] &gt;= 5)</Filter>
+    <TextSymbolizer size="12" face-name="Avenir Next Medium Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([ScaleRank] &lt;= 99) and ([NameAlt] = '')</Filter>
+    <TextSymbolizer face-name="Arial Regular" size="10" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([ScaleRank] &lt;= 99) and ([NameAlt] = '')</Filter>
+    <TextSymbolizer face-name="Arial Regular" size="10" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([NameAlt] != '') and ([ScaleRank] &lt;= 1)</Filter>
+    <TextSymbolizer size="16" face-name="Avenir Next Demi Bold Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[NameAlt]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([NameAlt] != '') and ([ScaleRank] &lt;= 1)</Filter>
+    <TextSymbolizer size="16" face-name="Avenir Next Demi Bold Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[NameAlt]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([NameAlt] != '') and ([ScaleRank] &lt;= 1)</Filter>
+    <TextSymbolizer size="16" face-name="Avenir Next Demi Bold Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[NameAlt]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([NameAlt] != '') and ([ScaleRank] &lt;= 1)</Filter>
+    <TextSymbolizer size="16" face-name="Avenir Next Demi Bold Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[NameAlt]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([NameAlt] != '') and ([ScaleRank] &lt;= 1)</Filter>
+    <TextSymbolizer size="16" face-name="Avenir Next Demi Bold Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[NameAlt]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([NameAlt] != '') and ([ScaleRank] &lt;= 1)</Filter>
+    <TextSymbolizer size="16" face-name="Avenir Next Demi Bold Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[NameAlt]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([NameAlt] != '') and ([ScaleRank] &lt;= 1)</Filter>
+    <TextSymbolizer size="16" face-name="Avenir Next Demi Bold Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([NameAlt] != '') and ([ScaleRank] &lt;= 2)</Filter>
+    <TextSymbolizer size="16" face-name="Avenir Next Demi Bold Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[NameAlt]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([NameAlt] != '') and ([ScaleRank] &lt;= 2)</Filter>
+    <TextSymbolizer size="16" face-name="Avenir Next Demi Bold Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[NameAlt]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([NameAlt] != '') and ([ScaleRank] &lt;= 2)</Filter>
+    <TextSymbolizer size="16" face-name="Avenir Next Demi Bold Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[NameAlt]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([NameAlt] != '') and ([ScaleRank] &lt;= 2)</Filter>
+    <TextSymbolizer size="16" face-name="Avenir Next Demi Bold Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[NameAlt]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([NameAlt] != '') and ([ScaleRank] &lt;= 2)</Filter>
+    <TextSymbolizer size="16" face-name="Avenir Next Demi Bold Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[NameAlt]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([NameAlt] != '') and ([ScaleRank] &lt;= 2)</Filter>
+    <TextSymbolizer size="16" face-name="Avenir Next Demi Bold Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([NameAlt] != '') and ([ScaleRank] &lt;= 4) and ([ScaleRank] &gt;= 3)</Filter>
+    <TextSymbolizer size="14" face-name="Avenir Next Demi Bold Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[NameAlt]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([NameAlt] != '') and ([ScaleRank] &lt;= 4) and ([ScaleRank] &gt;= 3)</Filter>
+    <TextSymbolizer size="14" face-name="Avenir Next Demi Bold Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[NameAlt]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([NameAlt] != '') and ([ScaleRank] &lt;= 4) and ([ScaleRank] &gt;= 3)</Filter>
+    <TextSymbolizer size="14" face-name="Avenir Next Demi Bold Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[NameAlt]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([NameAlt] != '') and ([ScaleRank] &lt;= 4) and ([ScaleRank] &gt;= 3)</Filter>
+    <TextSymbolizer size="14" face-name="Avenir Next Demi Bold Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[NameAlt]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([NameAlt] != '') and ([ScaleRank] &lt;= 4) and ([ScaleRank] &gt;= 3)</Filter>
+    <TextSymbolizer size="14" face-name="Avenir Next Demi Bold Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([NameAlt] != '') and ([ScaleRank] &lt; 3)</Filter>
+    <TextSymbolizer size="16" face-name="Avenir Next Demi Bold Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[NameAlt]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([NameAlt] != '') and ([ScaleRank] &lt; 3)</Filter>
+    <TextSymbolizer size="16" face-name="Avenir Next Demi Bold Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[NameAlt]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([NameAlt] != '') and ([ScaleRank] &lt; 3)</Filter>
+    <TextSymbolizer size="16" face-name="Avenir Next Demi Bold Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[NameAlt]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([NameAlt] != '') and ([ScaleRank] &lt; 3)</Filter>
+    <TextSymbolizer size="16" face-name="Avenir Next Demi Bold Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[NameAlt]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([NameAlt] != '') and ([ScaleRank] &lt; 3)</Filter>
+    <TextSymbolizer size="16" face-name="Avenir Next Demi Bold Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([NameAlt] != '') and ([ScaleRank] &lt;= 4)</Filter>
+    <TextSymbolizer face-name="Arial Regular" size="10" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[NameAlt]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([NameAlt] != '') and ([ScaleRank] &lt;= 4)</Filter>
+    <TextSymbolizer face-name="Arial Regular" size="10" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[NameAlt]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([NameAlt] != '') and ([ScaleRank] &lt;= 4)</Filter>
+    <TextSymbolizer face-name="Arial Regular" size="10" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[NameAlt]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([NameAlt] != '') and ([ScaleRank] &lt;= 4)</Filter>
+    <TextSymbolizer face-name="Arial Regular" size="10" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[NameAlt]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([NameAlt] != '') and ([ScaleRank] &lt;= 4)</Filter>
+    <TextSymbolizer face-name="Arial Regular" size="10" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([NameAlt] != '') and ([ScaleRank] &gt;= 3) and ([ScaleRank] &lt; 5)</Filter>
+    <TextSymbolizer size="14" face-name="Avenir Next Demi Bold Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[NameAlt]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([NameAlt] != '') and ([ScaleRank] &gt;= 3) and ([ScaleRank] &lt; 5)</Filter>
+    <TextSymbolizer size="14" face-name="Avenir Next Demi Bold Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[NameAlt]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([NameAlt] != '') and ([ScaleRank] &gt;= 3) and ([ScaleRank] &lt; 5)</Filter>
+    <TextSymbolizer size="14" face-name="Avenir Next Demi Bold Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[NameAlt]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([NameAlt] != '') and ([ScaleRank] &gt;= 3) and ([ScaleRank] &lt; 5)</Filter>
+    <TextSymbolizer size="14" face-name="Avenir Next Demi Bold Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &lt;= 6) and ([NameAlt] != '') and ([ScaleRank] &gt;= 5)</Filter>
+    <TextSymbolizer size="12" face-name="Avenir Next Medium Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[NameAlt]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &lt;= 6) and ([NameAlt] != '') and ([ScaleRank] &gt;= 5)</Filter>
+    <TextSymbolizer size="12" face-name="Avenir Next Medium Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[NameAlt]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &lt;= 6) and ([NameAlt] != '') and ([ScaleRank] &gt;= 5)</Filter>
+    <TextSymbolizer size="12" face-name="Avenir Next Medium Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[NameAlt]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &lt;= 6) and ([NameAlt] != '') and ([ScaleRank] &gt;= 5)</Filter>
+    <TextSymbolizer size="12" face-name="Avenir Next Medium Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([ScaleRank] &lt;= 6) and ([NameAlt] != '')</Filter>
+    <TextSymbolizer face-name="Arial Regular" size="10" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[NameAlt]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([ScaleRank] &lt;= 6) and ([NameAlt] != '')</Filter>
+    <TextSymbolizer face-name="Arial Regular" size="10" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[NameAlt]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([ScaleRank] &lt;= 6) and ([NameAlt] != '')</Filter>
+    <TextSymbolizer face-name="Arial Regular" size="10" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[NameAlt]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([ScaleRank] &lt;= 6) and ([NameAlt] != '')</Filter>
+    <TextSymbolizer face-name="Arial Regular" size="10" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &lt;= 8) and ([NameAlt] != '') and ([ScaleRank] &gt;= 5)</Filter>
+    <TextSymbolizer size="12" face-name="Avenir Next Medium Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[NameAlt]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &lt;= 8) and ([NameAlt] != '') and ([ScaleRank] &gt;= 5)</Filter>
+    <TextSymbolizer size="12" face-name="Avenir Next Medium Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[NameAlt]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &lt;= 8) and ([NameAlt] != '') and ([ScaleRank] &gt;= 5)</Filter>
+    <TextSymbolizer size="12" face-name="Avenir Next Medium Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([ScaleRank] &lt;= 8) and ([NameAlt] != '')</Filter>
+    <TextSymbolizer face-name="Arial Regular" size="10" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[NameAlt]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([ScaleRank] &lt;= 8) and ([NameAlt] != '')</Filter>
+    <TextSymbolizer face-name="Arial Regular" size="10" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[NameAlt]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([ScaleRank] &lt;= 8) and ([NameAlt] != '')</Filter>
+    <TextSymbolizer face-name="Arial Regular" size="10" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &lt;= 99) and ([NameAlt] != '') and ([ScaleRank] &gt;= 5)</Filter>
+    <TextSymbolizer size="12" face-name="Avenir Next Medium Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[NameAlt]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &lt;= 99) and ([NameAlt] != '') and ([ScaleRank] &gt;= 5)</Filter>
+    <TextSymbolizer size="12" face-name="Avenir Next Medium Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([ScaleRank] &lt;= 99) and ([NameAlt] != '')</Filter>
+    <TextSymbolizer face-name="Arial Regular" size="10" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[NameAlt]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([ScaleRank] &lt;= 99) and ([NameAlt] != '')</Filter>
+    <TextSymbolizer face-name="Arial Regular" size="10" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000000</MaxScaleDenominator>
+    <MinScaleDenominator>50000000</MinScaleDenominator>
+    <Filter>([NameAlt] = '') and ([ScaleRank] = 0) and ([FeatureCla] = 'continent')</Filter>
+    <TextSymbolizer size="28" character-spacing="4" wrap-width="40" face-name="Avenir Next Bold Italic" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([NameAlt] = '') and ([ScaleRank] = 0) and ([FeatureCla] = 'continent')</Filter>
+    <TextSymbolizer size="28" character-spacing="4" wrap-width="40" face-name="Avenir Next Bold Italic" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([NameAlt] = '') and ([ScaleRank] = 0) and ([FeatureCla] = 'continent')</Filter>
+    <TextSymbolizer size="28" character-spacing="4" wrap-width="40" face-name="Avenir Next Bold Italic" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <Filter>([NameAlt] = '') and ([ScaleRank] = 0) and ([FeatureCla] = 'continent')</Filter>
+    <TextSymbolizer size="28" character-spacing="4" wrap-width="40" face-name="Avenir Next Bold Italic" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000000</MaxScaleDenominator>
+    <MinScaleDenominator>50000000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([NameAlt] = '') and ([ScaleRank] = 0)</Filter>
+    <TextSymbolizer face-name="Avenir Next Bold Italic" size="18" character-spacing="1" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([NameAlt] = '') and ([ScaleRank] = 0)</Filter>
+    <TextSymbolizer face-name="Avenir Next Bold Italic" size="18" character-spacing="1" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([NameAlt] = '') and ([ScaleRank] = 0)</Filter>
+    <TextSymbolizer face-name="Avenir Next Bold Italic" size="18" character-spacing="1" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <Filter>([FeatureCla] != 'range/mtn') and ([NameAlt] = '') and ([ScaleRank] = 0)</Filter>
+    <TextSymbolizer face-name="Avenir Next Bold Italic" size="18" character-spacing="1" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000000</MaxScaleDenominator>
+    <MinScaleDenominator>50000000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &lt;= 0) and ([NameAlt] = '')</Filter>
+    <TextSymbolizer face-name="Arial Regular" size="10" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &lt;= 0) and ([NameAlt] = '')</Filter>
+    <TextSymbolizer face-name="Arial Regular" size="10" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &lt;= 0) and ([NameAlt] = '')</Filter>
+    <TextSymbolizer face-name="Arial Regular" size="10" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &lt;= 0) and ([NameAlt] = '')</Filter>
+    <TextSymbolizer face-name="Arial Regular" size="10" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &lt;= 1) and ([NameAlt] = '')</Filter>
+    <TextSymbolizer face-name="Arial Regular" size="10" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &lt;= 1) and ([NameAlt] = '')</Filter>
+    <TextSymbolizer face-name="Arial Regular" size="10" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &lt;= 1) and ([NameAlt] = '')</Filter>
+    <TextSymbolizer face-name="Arial Regular" size="10" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &lt;= 2) and ([NameAlt] = '')</Filter>
+    <TextSymbolizer face-name="Arial Regular" size="10" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &lt;= 2) and ([NameAlt] = '')</Filter>
+    <TextSymbolizer face-name="Arial Regular" size="10" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000000</MaxScaleDenominator>
+    <MinScaleDenominator>50000000</MinScaleDenominator>
+    <Filter>([NameAlt] != '') and ([ScaleRank] = 0) and ([FeatureCla] = 'continent')</Filter>
+    <TextSymbolizer size="28" character-spacing="4" wrap-width="40" face-name="Avenir Next Bold Italic" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[NameAlt]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([NameAlt] != '') and ([ScaleRank] = 0) and ([FeatureCla] = 'continent')</Filter>
+    <TextSymbolizer size="28" character-spacing="4" wrap-width="40" face-name="Avenir Next Bold Italic" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[NameAlt]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([NameAlt] != '') and ([ScaleRank] = 0) and ([FeatureCla] = 'continent')</Filter>
+    <TextSymbolizer size="28" character-spacing="4" wrap-width="40" face-name="Avenir Next Bold Italic" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[NameAlt]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <Filter>([NameAlt] != '') and ([ScaleRank] = 0) and ([FeatureCla] = 'continent')</Filter>
+    <TextSymbolizer size="28" character-spacing="4" wrap-width="40" face-name="Avenir Next Bold Italic" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000000</MaxScaleDenominator>
+    <MinScaleDenominator>50000000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([NameAlt] != '') and ([ScaleRank] = 0)</Filter>
+    <TextSymbolizer face-name="Avenir Next Bold Italic" size="18" character-spacing="1" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[NameAlt]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([NameAlt] != '') and ([ScaleRank] = 0)</Filter>
+    <TextSymbolizer face-name="Avenir Next Bold Italic" size="18" character-spacing="1" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[NameAlt]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([NameAlt] != '') and ([ScaleRank] = 0)</Filter>
+    <TextSymbolizer face-name="Avenir Next Bold Italic" size="18" character-spacing="1" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[NameAlt]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <Filter>([FeatureCla] != 'range/mtn') and ([NameAlt] != '') and ([ScaleRank] = 0)</Filter>
+    <TextSymbolizer face-name="Avenir Next Bold Italic" size="18" character-spacing="1" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000000</MaxScaleDenominator>
+    <MinScaleDenominator>50000000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &lt;= 0) and ([NameAlt] != '')</Filter>
+    <TextSymbolizer face-name="Arial Regular" size="10" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[NameAlt]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &lt;= 0) and ([NameAlt] != '')</Filter>
+    <TextSymbolizer face-name="Arial Regular" size="10" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[NameAlt]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &lt;= 0) and ([NameAlt] != '')</Filter>
+    <TextSymbolizer face-name="Arial Regular" size="10" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[NameAlt]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &lt;= 0) and ([NameAlt] != '')</Filter>
+    <TextSymbolizer face-name="Arial Regular" size="10" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &lt;= 1) and ([NameAlt] != '')</Filter>
+    <TextSymbolizer face-name="Arial Regular" size="10" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[NameAlt]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &lt;= 1) and ([NameAlt] != '')</Filter>
+    <TextSymbolizer face-name="Arial Regular" size="10" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[NameAlt]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &lt;= 1) and ([NameAlt] != '')</Filter>
+    <TextSymbolizer face-name="Arial Regular" size="10" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &lt;= 2) and ([NameAlt] != '')</Filter>
+    <TextSymbolizer face-name="Arial Regular" size="10" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[[NameAlt]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &lt;= 2) and ([NameAlt] != '')</Filter>
+    <TextSymbolizer face-name="Arial Regular" size="10" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt;= 3) and ([ScaleRank] &lt; 5)</Filter>
+    <TextSymbolizer size="14" face-name="Avenir Next Demi Bold Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([ScaleRank] &lt; 3)</Filter>
+    <TextSymbolizer size="16" face-name="Avenir Next Demi Bold Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &lt;= 99) and ([ScaleRank] &gt;= 5)</Filter>
+    <TextSymbolizer size="12" face-name="Avenir Next Medium Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([ScaleRank] &lt;= 99)</Filter>
+    <TextSymbolizer face-name="Arial Regular" size="10" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &lt;= 8) and ([ScaleRank] &gt;= 5)</Filter>
+    <TextSymbolizer size="12" face-name="Avenir Next Medium Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([ScaleRank] &lt;= 8)</Filter>
+    <TextSymbolizer face-name="Arial Regular" size="10" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &lt;= 6) and ([ScaleRank] &gt;= 5)</Filter>
+    <TextSymbolizer size="12" face-name="Avenir Next Medium Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([ScaleRank] &lt;= 6)</Filter>
+    <TextSymbolizer face-name="Arial Regular" size="10" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &lt;= 4) and ([ScaleRank] &gt;= 3)</Filter>
+    <TextSymbolizer size="14" face-name="Avenir Next Demi Bold Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt; 0) and ([ScaleRank] &lt;= 4)</Filter>
+    <TextSymbolizer face-name="Arial Regular" size="10" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <Filter>([ScaleRank] = 0) and ([FeatureCla] = 'continent')</Filter>
+    <TextSymbolizer size="28" character-spacing="4" wrap-width="40" face-name="Avenir Next Bold Italic" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] = 0)</Filter>
+    <TextSymbolizer face-name="Avenir Next Bold Italic" size="18" character-spacing="1" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &lt;= 2)</Filter>
+    <TextSymbolizer face-name="Arial Regular" size="10" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &lt;= 1)</Filter>
+    <TextSymbolizer face-name="Arial Regular" size="10" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <Filter>([FeatureCla] != 'range/mtn') and ([ScaleRank] &lt;= 0)</Filter>
+    <TextSymbolizer face-name="Arial Regular" size="10" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <Filter>([ScaleRank] &lt; 100) and ([FeatureCla] != 'range/mtn') and ([ScaleRank] &gt;= 5)</Filter>
+    <TextSymbolizer size="12" face-name="Avenir Next Medium Italic" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <Filter>([ScaleRank] &lt; 100) and ([FeatureCla] != 'range/mtn')</Filter>
+    <TextSymbolizer face-name="Arial Regular" size="10" wrap-width="50" fill="#aef17b" halo-fill="#161616" halo-radius="1.5" text-transform="capitalize" spacing="32" character-spacing="0" line-spacing="0" label-position-tolerance="0" max-char-angle-delta="22.5" minimum-distance="8" minimum-padding="8" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Layer name="geography_region"
+  srs="+proj=longlat +ellps=WGS84 +no_defs">
+    <StyleName>geography_region</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/MarbleLabel/layers/geography_region/ne_10m_geography_regions_poly_points_ord.shp]]></Parameter>
+       <Parameter name="id"><![CDATA[geography_region]]></Parameter>
+       <Parameter name="project"><![CDATA[MarbleLabel]]></Parameter>
+       <Parameter name="srs"><![CDATA[]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="geography_points-label" filter-mode="first" >
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([Name] != '') and ([ScaleRank] &lt;= 3)</Filter>
+    <TextSymbolizer face-name="Avenir Next Medium Italic" fill="#aef17b" halo-fill="#161616" allow-overlap="false" halo-radius="1.4" size="12" spacing="6" dx="6" placement="point" placement-type="simple" placements="E,NE,SE,W,NW,SW" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Style name="geography_points" filter-mode="first" >
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <Filter>([Name] != '') and ([ScaleRank] &lt;= 5)</Filter>
+    <MarkersSymbolizer width="6" fill="#aef17b" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer face-name="Avenir Next Medium Italic" fill="#aef17b" halo-fill="#161616" allow-overlap="false" halo-radius="1.4" size="12" spacing="6" dx="6" placement="point" placement-type="simple" placements="E,NE,SE,W,NW,SW" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([Name] != '') and ([ScaleRank] &lt;= 5)</Filter>
+    <MarkersSymbolizer width="6" fill="#aef17b" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer face-name="Avenir Next Medium Italic" fill="#aef17b" halo-fill="#161616" allow-overlap="false" halo-radius="1.4" size="12" spacing="6" dx="6" placement="point" placement-type="simple" placements="E,NE,SE,W,NW,SW" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([Name] != '') and ([ScaleRank] &lt;= 5)</Filter>
+    <MarkersSymbolizer width="6" fill="#aef17b" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer face-name="Avenir Next Medium Italic" fill="#aef17b" halo-fill="#161616" allow-overlap="false" halo-radius="1.4" size="12" spacing="6" dx="6" placement="point" placement-type="simple" placements="E,NE,SE,W,NW,SW" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([Name] != '') and ([ScaleRank] &lt;= 5)</Filter>
+    <MarkersSymbolizer width="6" fill="#aef17b" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer face-name="Avenir Next Medium Italic" fill="#aef17b" halo-fill="#161616" allow-overlap="false" halo-radius="1.4" size="12" spacing="6" dx="6" placement="point" placement-type="simple" placements="E,NE,SE,W,NW,SW" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <Filter>([Name] != '') and ([ScaleRank] &lt;= 7)</Filter>
+    <MarkersSymbolizer width="6" fill="#aef17b" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer face-name="Avenir Next Medium Italic" fill="#aef17b" halo-fill="#161616" allow-overlap="false" halo-radius="1.4" size="12" spacing="6" dx="6" placement="point" placement-type="simple" placements="E,NE,SE,W,NW,SW" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([Name] != '') and ([ScaleRank] &lt;= 7)</Filter>
+    <MarkersSymbolizer width="6" fill="#aef17b" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer face-name="Avenir Next Medium Italic" fill="#aef17b" halo-fill="#161616" allow-overlap="false" halo-radius="1.4" size="12" spacing="6" dx="6" placement="point" placement-type="simple" placements="E,NE,SE,W,NW,SW" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([Name] != '') and ([ScaleRank] &lt;= 7)</Filter>
+    <MarkersSymbolizer width="6" fill="#aef17b" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer face-name="Avenir Next Medium Italic" fill="#aef17b" halo-fill="#161616" allow-overlap="false" halo-radius="1.4" size="12" spacing="6" dx="6" placement="point" placement-type="simple" placements="E,NE,SE,W,NW,SW" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <Filter>([Name] != '') and ([ScaleRank] &lt;= 9)</Filter>
+    <MarkersSymbolizer width="6" fill="#aef17b" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer face-name="Avenir Next Medium Italic" fill="#aef17b" halo-fill="#161616" allow-overlap="false" halo-radius="1.4" size="12" spacing="6" dx="6" placement="point" placement-type="simple" placements="E,NE,SE,W,NW,SW" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([Name] != '') and ([ScaleRank] &lt;= 9)</Filter>
+    <MarkersSymbolizer width="6" fill="#aef17b" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer face-name="Avenir Next Medium Italic" fill="#aef17b" halo-fill="#161616" allow-overlap="false" halo-radius="1.4" size="12" spacing="6" dx="6" placement="point" placement-type="simple" placements="E,NE,SE,W,NW,SW" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <Filter>([Name] != '') and ([ScaleRank] &lt;= 99)</Filter>
+    <MarkersSymbolizer width="6" fill="#aef17b" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer face-name="Avenir Next Medium Italic" fill="#aef17b" halo-fill="#161616" allow-overlap="false" halo-radius="1.4" size="12" spacing="6" dx="6" placement="point" placement-type="simple" placements="E,NE,SE,W,NW,SW" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Style name="geography_points-marker" filter-mode="first" >
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([Name] != '') and ([ScaleRank] &lt;= 3)</Filter>
+    <MarkersSymbolizer width="6" fill="#aef17b" stroke="#161616" allow-overlap="false" />
+  </Rule>
+</Style>
+<Layer name="geography_points"
+  srs="+proj=longlat +ellps=WGS84 +no_defs">
+    <StyleName>geography_points-marker</StyleName>
+    <StyleName>geography_points</StyleName>
+    <StyleName>geography_points-label</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/MarbleLabel/layers/geography_points/ne_10m_geography_regions_points_ord.shp]]></Parameter>
+       <Parameter name="id"><![CDATA[geography_points]]></Parameter>
+       <Parameter name="project"><![CDATA[MarbleLabel]]></Parameter>
+       <Parameter name="srs"><![CDATA[]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="lakes" filter-mode="first" >
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 2)</Filter>
+    <TextSymbolizer face-name="Avenir Next Demi Bold Italic" fill="#75bee0" halo-fill="#161616" allow-overlap="false" halo-radius="1.4" wrap-character="," wrap-width="30" size="14" placement="interior" minimum-distance="64" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 2)</Filter>
+    <TextSymbolizer face-name="Avenir Next Demi Bold Italic" fill="#75bee0" halo-fill="#161616" allow-overlap="false" halo-radius="1.4" wrap-character="," wrap-width="30" size="14" placement="interior" minimum-distance="64" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 2)</Filter>
+    <TextSymbolizer face-name="Avenir Next Demi Bold Italic" fill="#75bee0" halo-fill="#161616" allow-overlap="false" halo-radius="1.4" wrap-character="," wrap-width="30" size="14" placement="interior" minimum-distance="64" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 2)</Filter>
+    <TextSymbolizer face-name="Avenir Next Demi Bold Italic" fill="#75bee0" halo-fill="#161616" allow-overlap="false" halo-radius="1.4" wrap-character="," wrap-width="30" size="14" placement="interior" minimum-distance="64" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 2)</Filter>
+    <TextSymbolizer face-name="Avenir Next Demi Bold Italic" fill="#75bee0" halo-fill="#161616" allow-overlap="false" halo-radius="1.4" wrap-character="," wrap-width="30" size="14" placement="interior" minimum-distance="64" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 3)</Filter>
+    <TextSymbolizer face-name="Avenir Next Demi Bold Italic" fill="#75bee0" halo-fill="#161616" allow-overlap="false" halo-radius="1.4" wrap-character="," wrap-width="30" size="14" placement="interior" minimum-distance="64" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 3)</Filter>
+    <TextSymbolizer face-name="Avenir Next Demi Bold Italic" fill="#75bee0" halo-fill="#161616" allow-overlap="false" halo-radius="1.4" wrap-character="," wrap-width="30" size="14" placement="interior" minimum-distance="64" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 3)</Filter>
+    <TextSymbolizer face-name="Avenir Next Demi Bold Italic" fill="#75bee0" halo-fill="#161616" allow-overlap="false" halo-radius="1.4" wrap-character="," wrap-width="30" size="14" placement="interior" minimum-distance="64" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 3)</Filter>
+    <TextSymbolizer face-name="Avenir Next Demi Bold Italic" fill="#75bee0" halo-fill="#161616" allow-overlap="false" halo-radius="1.4" wrap-character="," wrap-width="30" size="14" placement="interior" minimum-distance="64" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 4)</Filter>
+    <TextSymbolizer face-name="Avenir Next Demi Bold Italic" fill="#75bee0" halo-fill="#161616" allow-overlap="false" halo-radius="1.4" wrap-character="," wrap-width="30" size="14" placement="interior" minimum-distance="64" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 4)</Filter>
+    <TextSymbolizer face-name="Avenir Next Demi Bold Italic" fill="#75bee0" halo-fill="#161616" allow-overlap="false" halo-radius="1.4" wrap-character="," wrap-width="30" size="14" placement="interior" minimum-distance="64" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 4)</Filter>
+    <TextSymbolizer face-name="Avenir Next Demi Bold Italic" fill="#75bee0" halo-fill="#161616" allow-overlap="false" halo-radius="1.4" wrap-character="," wrap-width="30" size="14" placement="interior" minimum-distance="64" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 5)</Filter>
+    <TextSymbolizer face-name="Avenir Next Demi Bold Italic" fill="#75bee0" halo-fill="#161616" allow-overlap="false" halo-radius="1.4" wrap-character="," wrap-width="30" size="14" placement="interior" minimum-distance="64" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 5)</Filter>
+    <TextSymbolizer face-name="Avenir Next Demi Bold Italic" fill="#75bee0" halo-fill="#161616" allow-overlap="false" halo-radius="1.4" wrap-character="," wrap-width="30" size="14" placement="interior" minimum-distance="64" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 6)</Filter>
+    <TextSymbolizer face-name="Avenir Next Demi Bold Italic" fill="#75bee0" halo-fill="#161616" allow-overlap="false" halo-radius="1.4" wrap-character="," wrap-width="30" size="14" placement="interior" minimum-distance="64" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Style name="lakes-label" filter-mode="first" >
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 0)</Filter>
+    <TextSymbolizer face-name="Avenir Next Demi Bold Italic" fill="#75bee0" halo-fill="#161616" allow-overlap="false" halo-radius="1.4" wrap-character="," wrap-width="30" size="14" placement="interior" minimum-distance="64" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Layer name="lakes"
+  srs="+proj=longlat +ellps=WGS84 +no_defs">
+    <StyleName>lakes-label</StyleName>
+    <StyleName>lakes</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/MarbleLabel/layers/lakes/ne_10m_lakes.shp]]></Parameter>
+       <Parameter name="id"><![CDATA[lakes]]></Parameter>
+       <Parameter name="project"><![CDATA[MarbleLabel]]></Parameter>
+       <Parameter name="srs"><![CDATA[]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="elevation-label" filter-mode="first" >
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([Name] != '') and ([ScaleRank] &lt;= 2)</Filter>
+    <TextSymbolizer face-name="Avenir Next Medium Italic" fill="#aef17b" halo-fill="#161616" allow-overlap="false" halo-radius="1.4" size="12" spacing="6" dx="6" placement="point" placement-type="simple" placements="E,W" ><![CDATA[[Name]+"\n"+[Elevation]+"m"]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Style name="elevation" filter-mode="first" >
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([Name] != '') and ([ScaleRank] &lt;= 3)</Filter>
+    <MarkersSymbolizer width="6" fill="#aef17b" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer face-name="Avenir Next Medium Italic" fill="#aef17b" halo-fill="#161616" allow-overlap="false" halo-radius="1.4" size="12" spacing="6" dx="6" placement="point" placement-type="simple" placements="E,W" ><![CDATA[[Name]+"\n"+[Elevation]+"m"]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([Name] != '') and ([ScaleRank] &lt;= 3)</Filter>
+    <MarkersSymbolizer width="6" fill="#aef17b" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer face-name="Avenir Next Medium Italic" fill="#aef17b" halo-fill="#161616" allow-overlap="false" halo-radius="1.4" size="12" spacing="6" dx="6" placement="point" placement-type="simple" placements="E,W" ><![CDATA[[Name]+"\n"+[Elevation]+"m"]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([Name] != '') and ([ScaleRank] &lt;= 3)</Filter>
+    <MarkersSymbolizer width="6" fill="#aef17b" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer face-name="Avenir Next Medium Italic" fill="#aef17b" halo-fill="#161616" allow-overlap="false" halo-radius="1.4" size="12" spacing="6" dx="6" placement="point" placement-type="simple" placements="E,W" ><![CDATA[[Name]+"\n"+[Elevation]+"m"]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([Name] != '') and ([ScaleRank] &lt;= 3)</Filter>
+    <MarkersSymbolizer width="6" fill="#aef17b" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer face-name="Avenir Next Medium Italic" fill="#aef17b" halo-fill="#161616" allow-overlap="false" halo-radius="1.4" size="12" spacing="6" dx="6" placement="point" placement-type="simple" placements="E,W" ><![CDATA[[Name]+"\n"+[Elevation]+"m"]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([Name] != '') and ([ScaleRank] &lt;= 6)</Filter>
+    <MarkersSymbolizer width="6" fill="#aef17b" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer face-name="Avenir Next Medium Italic" fill="#aef17b" halo-fill="#161616" allow-overlap="false" halo-radius="1.4" size="12" spacing="6" dx="6" placement="point" placement-type="simple" placements="E,W" ><![CDATA[[Name]+"\n"+[Elevation]+"m"]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([Name] != '') and ([ScaleRank] &lt;= 6)</Filter>
+    <MarkersSymbolizer width="6" fill="#aef17b" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer face-name="Avenir Next Medium Italic" fill="#aef17b" halo-fill="#161616" allow-overlap="false" halo-radius="1.4" size="12" spacing="6" dx="6" placement="point" placement-type="simple" placements="E,W" ><![CDATA[[Name]+"\n"+[Elevation]+"m"]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([Name] != '') and ([ScaleRank] &lt;= 6)</Filter>
+    <MarkersSymbolizer width="6" fill="#aef17b" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer face-name="Avenir Next Medium Italic" fill="#aef17b" halo-fill="#161616" allow-overlap="false" halo-radius="1.4" size="12" spacing="6" dx="6" placement="point" placement-type="simple" placements="E,W" ><![CDATA[[Name]+"\n"+[Elevation]+"m"]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([Name] != '') and ([ScaleRank] &lt;= 8)</Filter>
+    <MarkersSymbolizer width="6" fill="#aef17b" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer face-name="Avenir Next Medium Italic" fill="#aef17b" halo-fill="#161616" allow-overlap="false" halo-radius="1.4" size="12" spacing="6" dx="6" placement="point" placement-type="simple" placements="E,W" ><![CDATA[[Name]+"\n"+[Elevation]+"m"]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([Name] != '') and ([ScaleRank] &lt;= 8)</Filter>
+    <MarkersSymbolizer width="6" fill="#aef17b" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer face-name="Avenir Next Medium Italic" fill="#aef17b" halo-fill="#161616" allow-overlap="false" halo-radius="1.4" size="12" spacing="6" dx="6" placement="point" placement-type="simple" placements="E,W" ><![CDATA[[Name]+"\n"+[Elevation]+"m"]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt; 9) and ([Name] != '')</Filter>
+    <MarkersSymbolizer width="6" fill="#aef17b" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer face-name="Avenir Next Medium Italic" fill="#aef17b" halo-fill="#161616" allow-overlap="false" halo-radius="1.4" size="12" spacing="6" dx="6" placement="point" placement-type="simple" placements="E,W" ><![CDATA[[Name]+"\n"+[Elevation]+"m"]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Style name="elevation-marker" filter-mode="first" >
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([Name] != '') and ([ScaleRank] &lt;= 2)</Filter>
+    <MarkersSymbolizer width="6" fill="#aef17b" stroke="#161616" allow-overlap="false" />
+  </Rule>
+</Style>
+<Layer name="elevation"
+  srs="+proj=longlat +ellps=WGS84 +no_defs">
+    <StyleName>elevation-marker</StyleName>
+    <StyleName>elevation</StyleName>
+    <StyleName>elevation-label</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/MarbleLabel/layers/elevation/ne_10m_geography_regions_elevation_points.shp]]></Parameter>
+       <Parameter name="id"><![CDATA[elevation]]></Parameter>
+       <Parameter name="project"><![CDATA[MarbleLabel]]></Parameter>
+       <Parameter name="srs"><![CDATA[]]></Parameter>
+       <Parameter name="encoding"><![CDATA[utf-8]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="geography_marine" filter-mode="first" >
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([ScaleRank] &gt;= 5) and ([ScaleRank] &lt;= 6)</Filter>
+    <TextSymbolizer size="14" face-name="Avenir Next Medium Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" wrap-width="30" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([ScaleRank] &gt;= 5) and ([ScaleRank] &lt;= 6)</Filter>
+    <TextSymbolizer size="14" face-name="Avenir Next Medium Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" wrap-width="30" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([ScaleRank] &gt;= 5) and ([ScaleRank] &lt;= 6)</Filter>
+    <TextSymbolizer size="14" face-name="Avenir Next Medium Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" wrap-width="30" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([ScaleRank] &gt;= 5) and ([ScaleRank] &lt;= 6)</Filter>
+    <TextSymbolizer size="14" face-name="Avenir Next Medium Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" wrap-width="30" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([ScaleRank] &gt;= 5) and ([ScaleRank] &lt;= 8)</Filter>
+    <TextSymbolizer size="14" face-name="Avenir Next Medium Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" wrap-width="30" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([ScaleRank] &gt;= 5) and ([ScaleRank] &lt;= 8)</Filter>
+    <TextSymbolizer size="14" face-name="Avenir Next Medium Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" wrap-width="30" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([ScaleRank] &gt;= 5) and ([ScaleRank] &lt;= 8)</Filter>
+    <TextSymbolizer size="14" face-name="Avenir Next Medium Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" wrap-width="30" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([ScaleRank] &lt; 9) and ([ScaleRank] &gt;= 5)</Filter>
+    <TextSymbolizer size="14" face-name="Avenir Next Medium Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" wrap-width="30" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt; 9) and ([ScaleRank] &gt;= 5)</Filter>
+    <TextSymbolizer size="14" face-name="Avenir Next Medium Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" wrap-width="30" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([ScaleRank] &gt;= 3) and ([ScaleRank] &lt;= 4)</Filter>
+    <TextSymbolizer size="14" face-name="Avenir Next Demi Bold Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" wrap-width="30" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([ScaleRank] &gt;= 3) and ([ScaleRank] &lt;= 4)</Filter>
+    <TextSymbolizer size="14" face-name="Avenir Next Demi Bold Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" wrap-width="30" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([ScaleRank] &gt;= 3) and ([ScaleRank] &lt;= 4)</Filter>
+    <TextSymbolizer size="14" face-name="Avenir Next Demi Bold Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" wrap-width="30" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([ScaleRank] &gt;= 3) and ([ScaleRank] &lt;= 4)</Filter>
+    <TextSymbolizer size="14" face-name="Avenir Next Demi Bold Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" wrap-width="30" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([ScaleRank] &gt;= 3) and ([ScaleRank] &lt;= 4)</Filter>
+    <TextSymbolizer size="14" face-name="Avenir Next Demi Bold Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" wrap-width="30" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([ScaleRank] &gt;= 3) and ([ScaleRank] &lt; 5)</Filter>
+    <TextSymbolizer size="14" face-name="Avenir Next Demi Bold Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" wrap-width="30" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([ScaleRank] &gt;= 3) and ([ScaleRank] &lt; 5)</Filter>
+    <TextSymbolizer size="14" face-name="Avenir Next Demi Bold Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" wrap-width="30" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([ScaleRank] &gt;= 3) and ([ScaleRank] &lt; 5)</Filter>
+    <TextSymbolizer size="14" face-name="Avenir Next Demi Bold Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" wrap-width="30" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([ScaleRank] &gt;= 3) and ([ScaleRank] &lt; 5)</Filter>
+    <TextSymbolizer size="14" face-name="Avenir Next Demi Bold Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" wrap-width="30" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([ScaleRank] &gt; 0) and ([ScaleRank] &lt;= 2)</Filter>
+    <TextSymbolizer size="16" face-name="Avenir Next Bold Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" wrap-width="30" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([ScaleRank] &gt; 0) and ([ScaleRank] &lt;= 2)</Filter>
+    <TextSymbolizer size="16" face-name="Avenir Next Bold Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" wrap-width="30" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([ScaleRank] &gt; 0) and ([ScaleRank] &lt;= 2)</Filter>
+    <TextSymbolizer size="16" face-name="Avenir Next Bold Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" wrap-width="30" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([ScaleRank] &gt; 0) and ([ScaleRank] &lt;= 2)</Filter>
+    <TextSymbolizer size="16" face-name="Avenir Next Bold Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" wrap-width="30" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([ScaleRank] &gt; 0) and ([ScaleRank] &lt;= 2)</Filter>
+    <TextSymbolizer size="16" face-name="Avenir Next Bold Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" wrap-width="30" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>50000000</MinScaleDenominator>
+    <Filter>([ScaleRank] &gt; 0) and ([ScaleRank] &lt;= 2)</Filter>
+    <TextSymbolizer size="16" face-name="Avenir Next Bold Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" wrap-width="30" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([ScaleRank] &gt; 0) and ([ScaleRank] &lt; 3)</Filter>
+    <TextSymbolizer size="16" face-name="Avenir Next Bold Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" wrap-width="30" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([ScaleRank] &gt; 0) and ([ScaleRank] &lt; 3)</Filter>
+    <TextSymbolizer size="16" face-name="Avenir Next Bold Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" wrap-width="30" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([ScaleRank] &gt; 0) and ([ScaleRank] &lt; 3)</Filter>
+    <TextSymbolizer size="16" face-name="Avenir Next Bold Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" wrap-width="30" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([ScaleRank] &gt; 0) and ([ScaleRank] &lt; 3)</Filter>
+    <TextSymbolizer size="16" face-name="Avenir Next Bold Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" wrap-width="30" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([ScaleRank] &gt; 0) and ([ScaleRank] &lt; 3)</Filter>
+    <TextSymbolizer size="16" face-name="Avenir Next Bold Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" wrap-width="30" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([ScaleRank] = 0)</Filter>
+    <TextSymbolizer size="20" character-spacing="4" wrap-width="80" face-name="Avenir Next Bold Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([ScaleRank] = 0)</Filter>
+    <TextSymbolizer size="20" character-spacing="4" wrap-width="80" face-name="Avenir Next Bold Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000000</MaxScaleDenominator>
+    <MinScaleDenominator>50000000</MinScaleDenominator>
+    <Filter>([ScaleRank] = 0)</Filter>
+    <TextSymbolizer size="20" character-spacing="4" wrap-width="80" face-name="Avenir Next Bold Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([ScaleRank] = 0)</Filter>
+    <TextSymbolizer size="20" character-spacing="4" wrap-width="80" face-name="Avenir Next Bold Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([ScaleRank] = 0)</Filter>
+    <TextSymbolizer size="20" character-spacing="4" wrap-width="80" face-name="Avenir Next Bold Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([ScaleRank] = 0)</Filter>
+    <TextSymbolizer size="20" character-spacing="4" wrap-width="80" face-name="Avenir Next Bold Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>100000000</MinScaleDenominator>
+    <Filter>([ScaleRank] = 0)</Filter>
+    <TextSymbolizer size="20" character-spacing="4" wrap-width="80" face-name="Avenir Next Bold Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 0)</Filter>
+    <TextSymbolizer face-name="Avenir Next Bold Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" wrap-width="30" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 0)</Filter>
+    <TextSymbolizer face-name="Avenir Next Bold Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" wrap-width="30" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000000</MaxScaleDenominator>
+    <MinScaleDenominator>50000000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 0)</Filter>
+    <TextSymbolizer face-name="Avenir Next Bold Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" wrap-width="30" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 0)</Filter>
+    <TextSymbolizer face-name="Avenir Next Bold Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" wrap-width="30" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 0)</Filter>
+    <TextSymbolizer face-name="Avenir Next Bold Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" wrap-width="30" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 0)</Filter>
+    <TextSymbolizer face-name="Avenir Next Bold Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" wrap-width="30" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>100000000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 0)</Filter>
+    <TextSymbolizer face-name="Avenir Next Bold Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" wrap-width="30" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 2)</Filter>
+    <TextSymbolizer face-name="Avenir Next Bold Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" wrap-width="30" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 2)</Filter>
+    <TextSymbolizer face-name="Avenir Next Bold Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" wrap-width="30" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 2)</Filter>
+    <TextSymbolizer face-name="Avenir Next Bold Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" wrap-width="30" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 2)</Filter>
+    <TextSymbolizer face-name="Avenir Next Bold Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" wrap-width="30" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 2)</Filter>
+    <TextSymbolizer face-name="Avenir Next Bold Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" wrap-width="30" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>50000000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 2)</Filter>
+    <TextSymbolizer face-name="Avenir Next Bold Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" wrap-width="30" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 4)</Filter>
+    <TextSymbolizer face-name="Avenir Next Bold Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" wrap-width="30" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 4)</Filter>
+    <TextSymbolizer face-name="Avenir Next Bold Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" wrap-width="30" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 4)</Filter>
+    <TextSymbolizer face-name="Avenir Next Bold Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" wrap-width="30" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 4)</Filter>
+    <TextSymbolizer face-name="Avenir Next Bold Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" wrap-width="30" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 4)</Filter>
+    <TextSymbolizer face-name="Avenir Next Bold Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" wrap-width="30" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 6)</Filter>
+    <TextSymbolizer face-name="Avenir Next Bold Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" wrap-width="30" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 6)</Filter>
+    <TextSymbolizer face-name="Avenir Next Bold Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" wrap-width="30" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 6)</Filter>
+    <TextSymbolizer face-name="Avenir Next Bold Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" wrap-width="30" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 6)</Filter>
+    <TextSymbolizer face-name="Avenir Next Bold Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" wrap-width="30" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 8)</Filter>
+    <TextSymbolizer face-name="Avenir Next Bold Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" wrap-width="30" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 8)</Filter>
+    <TextSymbolizer face-name="Avenir Next Bold Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" wrap-width="30" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 8)</Filter>
+    <TextSymbolizer face-name="Avenir Next Bold Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" wrap-width="30" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([ScaleRank] &lt; 9)</Filter>
+    <TextSymbolizer face-name="Avenir Next Bold Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" wrap-width="30" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt; 9)</Filter>
+    <TextSymbolizer face-name="Avenir Next Bold Italic" fill="#75bee0" halo-fill="#161616" halo-radius="1.4" wrap-width="30" text-transform="capitalize" clip="false" spacing="6" placement="interior" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Layer name="geography_marine"
+  srs="+proj=longlat +ellps=WGS84 +no_defs">
+    <StyleName>geography_marine</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/MarbleLabel/layers/geography_marine/ne_10m_geography_marine_poly_points_ord.shp]]></Parameter>
+       <Parameter name="id"><![CDATA[geography_marine]]></Parameter>
+       <Parameter name="project"><![CDATA[MarbleLabel]]></Parameter>
+       <Parameter name="srs"><![CDATA[]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="countries" filter-mode="first" >
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 2)</Filter>
+    <TextSymbolizer size="20" face-name="Avenir Next Condensed Bold" fill="#f6d58c" halo-fill="#161616" halo-radius="1.6" wrap-width="120" clip="true" spacing="16" placement="point" placement-type="simple" placements="E,NE,SE,W,NW,SW,N,S" ><![CDATA[[NAME]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 2)</Filter>
+    <TextSymbolizer size="18" text-transform="uppercase" face-name="Avenir Next Condensed Bold" fill="#f6d58c" halo-fill="#161616" halo-radius="1.6" wrap-width="120" clip="true" spacing="16" placement="point" placement-type="simple" placements="E,NE,SE,W,NW,SW,N,S" ><![CDATA[[ABBREV]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 3)</Filter>
+    <TextSymbolizer size="20" face-name="Avenir Next Condensed Bold" fill="#f6d58c" halo-fill="#161616" halo-radius="1.6" wrap-width="120" clip="true" spacing="16" placement="point" placement-type="simple" placements="E,NE,SE,W,NW,SW,N,S" ><![CDATA[[NAME]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 3)</Filter>
+    <TextSymbolizer face-name="Avenir Next Condensed Bold" fill="#f6d58c" halo-fill="#161616" halo-radius="1.6" wrap-width="120" clip="true" spacing="16" placement="point" placement-type="simple" placements="E,NE,SE,W,NW,SW,N,S" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 6)</Filter>
+    <TextSymbolizer face-name="Avenir Next Condensed Bold" fill="#f6d58c" halo-fill="#161616" halo-radius="1.6" wrap-width="120" clip="true" spacing="16" placement="point" placement-type="simple" placements="E,NE,SE,W,NW,SW,N,S" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 5)</Filter>
+    <TextSymbolizer face-name="Avenir Next Condensed Bold" fill="#f6d58c" halo-fill="#161616" halo-radius="1.6" wrap-width="120" clip="true" spacing="16" placement="point" placement-type="simple" placements="E,NE,SE,W,NW,SW,N,S" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 8)</Filter>
+    <TextSymbolizer face-name="Avenir Next Condensed Bold" fill="#f6d58c" halo-fill="#161616" halo-radius="1.6" wrap-width="120" clip="true" spacing="16" placement="point" placement-type="simple" placements="E,NE,SE,W,NW,SW,N,S" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 7)</Filter>
+    <TextSymbolizer face-name="Avenir Next Condensed Bold" fill="#f6d58c" halo-fill="#161616" halo-radius="1.6" wrap-width="120" clip="true" spacing="16" placement="point" placement-type="simple" placements="E,NE,SE,W,NW,SW,N,S" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 4)</Filter>
+    <TextSymbolizer face-name="Avenir Next Condensed Bold" fill="#f6d58c" halo-fill="#161616" halo-radius="1.6" wrap-width="120" clip="true" spacing="16" placement="point" placement-type="simple" placements="E,NE,SE,W,NW,SW,N,S" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <TextSymbolizer face-name="Avenir Next Condensed Bold" fill="#f6d58c" halo-fill="#161616" halo-radius="1.6" wrap-width="120" clip="true" spacing="16" placement="point" placement-type="simple" placements="E,NE,SE,W,NW,SW,N,S" ><![CDATA[]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Layer name="countries"
+  status="off"
+  srs="+proj=longlat +ellps=WGS84 +no_defs">
+    <StyleName>countries</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/MarbleLabel/layers/countries/country_points_ordered.shp]]></Parameter>
+       <Parameter name="id"><![CDATA[countries]]></Parameter>
+       <Parameter name="project"><![CDATA[MarbleLabel]]></Parameter>
+       <Parameter name="srs"><![CDATA[]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="places-label" filter-mode="first" >
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([ADM0CAP] = 1) and ([WORLDCITY] = 0) and ([MEGACITY] = 0)</Filter>
+    <TextSymbolizer size="13" face-name="Avenir Next Condensed Medium" fill="#f6d58c" halo-fill="#161616" allow-overlap="false" halo-radius="1.2" dx="6" spacing="4" placement="point" placement-type="simple" placements="NE,E,SE,NW,W,SW,N,S" ><![CDATA[[NAME]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([ADM0CAP] = 1) and ([WORLDCITY] = 0) and ([MEGACITY] = 1)</Filter>
+    <TextSymbolizer size="14" face-name="Avenir Next Condensed Demi Bold" fill="#f6d58c" halo-fill="#161616" allow-overlap="false" halo-radius="1.2" dx="6" spacing="4" placement="point" placement-type="simple" placements="NE,E,SE,NW,W,SW,N,S" ><![CDATA[[NAME]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([ADM0CAP] = 1) and ([WORLDCITY] = 1)</Filter>
+    <TextSymbolizer size="16" face-name="Avenir Next Condensed Bold" fill="#f6d58c" halo-fill="#161616" allow-overlap="false" halo-radius="1.2" dx="6" spacing="4" placement="point" placement-type="simple" placements="NE,E,SE,NW,W,SW,N,S" ><![CDATA[[NAME]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([ADM0CAP] = 1)</Filter>
+    <TextSymbolizer face-name="Avenir Next Condensed Medium" fill="#f6d58c" halo-fill="#161616" allow-overlap="false" halo-radius="1.2" dx="6" spacing="4" placement="point" placement-type="simple" placements="NE,E,SE,NW,W,SW,N,S" ><![CDATA[[NAME]]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Style name="places" filter-mode="first" >
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([WORLDCITY] = 0) and ([MEGACITY] = 0) and ([SCALERANK] &lt;= 2)</Filter>
+    <MarkersSymbolizer width="6" fill="#f6d58c" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer size="13" face-name="Avenir Next Condensed Medium" fill="#f6d58c" halo-fill="#161616" allow-overlap="false" halo-radius="1.2" dx="6" spacing="4" placement="point" placement-type="simple" placements="NE,E,SE,NW,W,SW,N,S" ><![CDATA[[NAME]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([WORLDCITY] = 0) and ([MEGACITY] = 0) and ([SCALERANK] &lt;= 2)</Filter>
+    <MarkersSymbolizer width="6" fill="#f6d58c" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer size="13" face-name="Avenir Next Condensed Medium" fill="#f6d58c" halo-fill="#161616" allow-overlap="false" halo-radius="1.2" dx="6" spacing="4" placement="point" placement-type="simple" placements="NE,E,SE,NW,W,SW,N,S" ><![CDATA[[NAME]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([WORLDCITY] = 0) and ([MEGACITY] = 0) and ([SCALERANK] &lt;= 2)</Filter>
+    <MarkersSymbolizer width="6" fill="#f6d58c" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer size="13" face-name="Avenir Next Condensed Medium" fill="#f6d58c" halo-fill="#161616" allow-overlap="false" halo-radius="1.2" dx="6" spacing="4" placement="point" placement-type="simple" placements="NE,E,SE,NW,W,SW,N,S" ><![CDATA[[NAME]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([WORLDCITY] = 0) and ([MEGACITY] = 0) and ([SCALERANK] &lt;= 2)</Filter>
+    <MarkersSymbolizer width="6" fill="#f6d58c" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer size="13" face-name="Avenir Next Condensed Medium" fill="#f6d58c" halo-fill="#161616" allow-overlap="false" halo-radius="1.2" dx="6" spacing="4" placement="point" placement-type="simple" placements="NE,E,SE,NW,W,SW,N,S" ><![CDATA[[NAME]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([WORLDCITY] = 0) and ([MEGACITY] = 0) and ([SCALERANK] &lt;= 5)</Filter>
+    <MarkersSymbolizer width="6" fill="#f6d58c" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer size="13" face-name="Avenir Next Condensed Medium" fill="#f6d58c" halo-fill="#161616" allow-overlap="false" halo-radius="1.2" dx="6" spacing="4" placement="point" placement-type="simple" placements="NE,E,SE,NW,W,SW,N,S" ><![CDATA[[NAME]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([WORLDCITY] = 0) and ([MEGACITY] = 0) and ([SCALERANK] &lt;= 5)</Filter>
+    <MarkersSymbolizer width="6" fill="#f6d58c" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer size="13" face-name="Avenir Next Condensed Medium" fill="#f6d58c" halo-fill="#161616" allow-overlap="false" halo-radius="1.2" dx="6" spacing="4" placement="point" placement-type="simple" placements="NE,E,SE,NW,W,SW,N,S" ><![CDATA[[NAME]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([WORLDCITY] = 0) and ([MEGACITY] = 0) and ([SCALERANK] &lt;= 5)</Filter>
+    <MarkersSymbolizer width="6" fill="#f6d58c" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer size="13" face-name="Avenir Next Condensed Medium" fill="#f6d58c" halo-fill="#161616" allow-overlap="false" halo-radius="1.2" dx="6" spacing="4" placement="point" placement-type="simple" placements="NE,E,SE,NW,W,SW,N,S" ><![CDATA[[NAME]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([SCALERANK] &lt;= 7) and ([WORLDCITY] = 0) and ([MEGACITY] = 0)</Filter>
+    <MarkersSymbolizer width="6" fill="#f6d58c" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer size="13" face-name="Avenir Next Condensed Medium" fill="#f6d58c" halo-fill="#161616" allow-overlap="false" halo-radius="1.2" dx="6" spacing="4" placement="point" placement-type="simple" placements="NE,E,SE,NW,W,SW,N,S" ><![CDATA[[NAME]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([SCALERANK] &lt;= 7) and ([WORLDCITY] = 0) and ([MEGACITY] = 0)</Filter>
+    <MarkersSymbolizer width="6" fill="#f6d58c" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer size="13" face-name="Avenir Next Condensed Medium" fill="#f6d58c" halo-fill="#161616" allow-overlap="false" halo-radius="1.2" dx="6" spacing="4" placement="point" placement-type="simple" placements="NE,E,SE,NW,W,SW,N,S" ><![CDATA[[NAME]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([SCALERANK] &lt;= 99) and ([WORLDCITY] = 0) and ([MEGACITY] = 0)</Filter>
+    <MarkersSymbolizer width="6" fill="#f6d58c" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer size="13" face-name="Avenir Next Condensed Medium" fill="#f6d58c" halo-fill="#161616" allow-overlap="false" halo-radius="1.2" dx="6" spacing="4" placement="point" placement-type="simple" placements="NE,E,SE,NW,W,SW,N,S" ><![CDATA[[NAME]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([WORLDCITY] = 0) and ([MEGACITY] = 1) and ([SCALERANK] &lt;= 2)</Filter>
+    <MarkersSymbolizer width="7" fill="#f6d58c" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer size="14" face-name="Avenir Next Condensed Demi Bold" fill="#f6d58c" halo-fill="#161616" allow-overlap="false" halo-radius="1.2" dx="6" spacing="4" placement="point" placement-type="simple" placements="NE,E,SE,NW,W,SW,N,S" ><![CDATA[[NAME]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([WORLDCITY] = 0) and ([MEGACITY] = 1) and ([SCALERANK] &lt;= 2)</Filter>
+    <MarkersSymbolizer width="7" fill="#f6d58c" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer size="14" face-name="Avenir Next Condensed Demi Bold" fill="#f6d58c" halo-fill="#161616" allow-overlap="false" halo-radius="1.2" dx="6" spacing="4" placement="point" placement-type="simple" placements="NE,E,SE,NW,W,SW,N,S" ><![CDATA[[NAME]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([WORLDCITY] = 0) and ([MEGACITY] = 1) and ([SCALERANK] &lt;= 2)</Filter>
+    <MarkersSymbolizer width="7" fill="#f6d58c" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer size="14" face-name="Avenir Next Condensed Demi Bold" fill="#f6d58c" halo-fill="#161616" allow-overlap="false" halo-radius="1.2" dx="6" spacing="4" placement="point" placement-type="simple" placements="NE,E,SE,NW,W,SW,N,S" ><![CDATA[[NAME]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([WORLDCITY] = 0) and ([MEGACITY] = 1) and ([SCALERANK] &lt;= 2)</Filter>
+    <MarkersSymbolizer width="7" fill="#f6d58c" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer size="14" face-name="Avenir Next Condensed Demi Bold" fill="#f6d58c" halo-fill="#161616" allow-overlap="false" halo-radius="1.2" dx="6" spacing="4" placement="point" placement-type="simple" placements="NE,E,SE,NW,W,SW,N,S" ><![CDATA[[NAME]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([WORLDCITY] = 0) and ([MEGACITY] = 1) and ([SCALERANK] &lt;= 5)</Filter>
+    <MarkersSymbolizer width="7" fill="#f6d58c" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer size="14" face-name="Avenir Next Condensed Demi Bold" fill="#f6d58c" halo-fill="#161616" allow-overlap="false" halo-radius="1.2" dx="6" spacing="4" placement="point" placement-type="simple" placements="NE,E,SE,NW,W,SW,N,S" ><![CDATA[[NAME]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([WORLDCITY] = 0) and ([MEGACITY] = 1) and ([SCALERANK] &lt;= 5)</Filter>
+    <MarkersSymbolizer width="7" fill="#f6d58c" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer size="14" face-name="Avenir Next Condensed Demi Bold" fill="#f6d58c" halo-fill="#161616" allow-overlap="false" halo-radius="1.2" dx="6" spacing="4" placement="point" placement-type="simple" placements="NE,E,SE,NW,W,SW,N,S" ><![CDATA[[NAME]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([WORLDCITY] = 0) and ([MEGACITY] = 1) and ([SCALERANK] &lt;= 5)</Filter>
+    <MarkersSymbolizer width="7" fill="#f6d58c" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer size="14" face-name="Avenir Next Condensed Demi Bold" fill="#f6d58c" halo-fill="#161616" allow-overlap="false" halo-radius="1.2" dx="6" spacing="4" placement="point" placement-type="simple" placements="NE,E,SE,NW,W,SW,N,S" ><![CDATA[[NAME]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([WORLDCITY] = 0) and ([MEGACITY] = 1) and ([SCALERANK] &lt;= 7)</Filter>
+    <MarkersSymbolizer width="7" fill="#f6d58c" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer size="14" face-name="Avenir Next Condensed Demi Bold" fill="#f6d58c" halo-fill="#161616" allow-overlap="false" halo-radius="1.2" dx="6" spacing="4" placement="point" placement-type="simple" placements="NE,E,SE,NW,W,SW,N,S" ><![CDATA[[NAME]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([WORLDCITY] = 0) and ([MEGACITY] = 1) and ([SCALERANK] &lt;= 7)</Filter>
+    <MarkersSymbolizer width="7" fill="#f6d58c" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer size="14" face-name="Avenir Next Condensed Demi Bold" fill="#f6d58c" halo-fill="#161616" allow-overlap="false" halo-radius="1.2" dx="6" spacing="4" placement="point" placement-type="simple" placements="NE,E,SE,NW,W,SW,N,S" ><![CDATA[[NAME]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([SCALERANK] &lt;= 99) and ([WORLDCITY] = 0) and ([MEGACITY] = 1)</Filter>
+    <MarkersSymbolizer width="7" fill="#f6d58c" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer size="14" face-name="Avenir Next Condensed Demi Bold" fill="#f6d58c" halo-fill="#161616" allow-overlap="false" halo-radius="1.2" dx="6" spacing="4" placement="point" placement-type="simple" placements="NE,E,SE,NW,W,SW,N,S" ><![CDATA[[NAME]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([WORLDCITY] = 1) and ([SCALERANK] &lt;= 2)</Filter>
+    <MarkersSymbolizer width="8" fill="#f6d58c" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer size="18" face-name="Avenir Next Condensed Bold" fill="#f6d58c" halo-fill="#161616" allow-overlap="false" halo-radius="1.2" dx="6" spacing="4" placement="point" placement-type="simple" placements="NE,E,SE,NW,W,SW,N,S" ><![CDATA[[NAME]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([WORLDCITY] = 1) and ([SCALERANK] &lt;= 2)</Filter>
+    <MarkersSymbolizer width="8" fill="#f6d58c" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer size="18" face-name="Avenir Next Condensed Bold" fill="#f6d58c" halo-fill="#161616" allow-overlap="false" halo-radius="1.2" dx="6" spacing="4" placement="point" placement-type="simple" placements="NE,E,SE,NW,W,SW,N,S" ><![CDATA[[NAME]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([WORLDCITY] = 1) and ([SCALERANK] &lt;= 2)</Filter>
+    <MarkersSymbolizer width="8" fill="#f6d58c" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer size="18" face-name="Avenir Next Condensed Bold" fill="#f6d58c" halo-fill="#161616" allow-overlap="false" halo-radius="1.2" dx="6" spacing="4" placement="point" placement-type="simple" placements="NE,E,SE,NW,W,SW,N,S" ><![CDATA[[NAME]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([WORLDCITY] = 1) and ([SCALERANK] &lt;= 2)</Filter>
+    <MarkersSymbolizer width="8" fill="#f6d58c" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer size="16" face-name="Avenir Next Condensed Bold" fill="#f6d58c" halo-fill="#161616" allow-overlap="false" halo-radius="1.2" dx="6" spacing="4" placement="point" placement-type="simple" placements="NE,E,SE,NW,W,SW,N,S" ><![CDATA[[NAME]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([WORLDCITY] = 1) and ([SCALERANK] &lt;= 5)</Filter>
+    <MarkersSymbolizer width="8" fill="#f6d58c" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer size="18" face-name="Avenir Next Condensed Bold" fill="#f6d58c" halo-fill="#161616" allow-overlap="false" halo-radius="1.2" dx="6" spacing="4" placement="point" placement-type="simple" placements="NE,E,SE,NW,W,SW,N,S" ><![CDATA[[NAME]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([WORLDCITY] = 1) and ([SCALERANK] &lt;= 5)</Filter>
+    <MarkersSymbolizer width="8" fill="#f6d58c" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer size="18" face-name="Avenir Next Condensed Bold" fill="#f6d58c" halo-fill="#161616" allow-overlap="false" halo-radius="1.2" dx="6" spacing="4" placement="point" placement-type="simple" placements="NE,E,SE,NW,W,SW,N,S" ><![CDATA[[NAME]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([WORLDCITY] = 1) and ([SCALERANK] &lt;= 5)</Filter>
+    <MarkersSymbolizer width="8" fill="#f6d58c" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer size="18" face-name="Avenir Next Condensed Bold" fill="#f6d58c" halo-fill="#161616" allow-overlap="false" halo-radius="1.2" dx="6" spacing="4" placement="point" placement-type="simple" placements="NE,E,SE,NW,W,SW,N,S" ><![CDATA[[NAME]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([WORLDCITY] = 1) and ([SCALERANK] &lt;= 7)</Filter>
+    <MarkersSymbolizer width="8" fill="#f6d58c" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer size="18" face-name="Avenir Next Condensed Bold" fill="#f6d58c" halo-fill="#161616" allow-overlap="false" halo-radius="1.2" dx="6" spacing="4" placement="point" placement-type="simple" placements="NE,E,SE,NW,W,SW,N,S" ><![CDATA[[NAME]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([WORLDCITY] = 1) and ([SCALERANK] &lt;= 7)</Filter>
+    <MarkersSymbolizer width="8" fill="#f6d58c" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer size="18" face-name="Avenir Next Condensed Bold" fill="#f6d58c" halo-fill="#161616" allow-overlap="false" halo-radius="1.2" dx="6" spacing="4" placement="point" placement-type="simple" placements="NE,E,SE,NW,W,SW,N,S" ><![CDATA[[NAME]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([SCALERANK] &lt;= 99) and ([WORLDCITY] = 1)</Filter>
+    <MarkersSymbolizer width="8" fill="#f6d58c" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer size="18" face-name="Avenir Next Condensed Bold" fill="#f6d58c" halo-fill="#161616" allow-overlap="false" halo-radius="1.2" dx="6" spacing="4" placement="point" placement-type="simple" placements="NE,E,SE,NW,W,SW,N,S" ><![CDATA[[NAME]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([SCALERANK] &lt;= 2)</Filter>
+    <MarkersSymbolizer fill="#f6d58c" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer face-name="Avenir Next Condensed Medium" fill="#f6d58c" halo-fill="#161616" allow-overlap="false" halo-radius="1.2" dx="6" spacing="4" placement="point" placement-type="simple" placements="NE,E,SE,NW,W,SW,N,S" ><![CDATA[[NAME]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([SCALERANK] &lt;= 2)</Filter>
+    <MarkersSymbolizer fill="#f6d58c" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer face-name="Avenir Next Condensed Medium" fill="#f6d58c" halo-fill="#161616" allow-overlap="false" halo-radius="1.2" dx="6" spacing="4" placement="point" placement-type="simple" placements="NE,E,SE,NW,W,SW,N,S" ><![CDATA[[NAME]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([SCALERANK] &lt;= 2)</Filter>
+    <MarkersSymbolizer fill="#f6d58c" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer face-name="Avenir Next Condensed Medium" fill="#f6d58c" halo-fill="#161616" allow-overlap="false" halo-radius="1.2" dx="6" spacing="4" placement="point" placement-type="simple" placements="NE,E,SE,NW,W,SW,N,S" ><![CDATA[[NAME]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([SCALERANK] &lt;= 2)</Filter>
+    <MarkersSymbolizer fill="#f6d58c" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer face-name="Avenir Next Condensed Medium" fill="#f6d58c" halo-fill="#161616" allow-overlap="false" halo-radius="1.2" dx="6" spacing="4" placement="point" placement-type="simple" placements="NE,E,SE,NW,W,SW,N,S" ><![CDATA[[NAME]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([SCALERANK] &lt;= 5)</Filter>
+    <MarkersSymbolizer fill="#f6d58c" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer face-name="Avenir Next Condensed Medium" fill="#f6d58c" halo-fill="#161616" allow-overlap="false" halo-radius="1.2" dx="6" spacing="4" placement="point" placement-type="simple" placements="NE,E,SE,NW,W,SW,N,S" ><![CDATA[[NAME]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([SCALERANK] &lt;= 5)</Filter>
+    <MarkersSymbolizer fill="#f6d58c" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer face-name="Avenir Next Condensed Medium" fill="#f6d58c" halo-fill="#161616" allow-overlap="false" halo-radius="1.2" dx="6" spacing="4" placement="point" placement-type="simple" placements="NE,E,SE,NW,W,SW,N,S" ><![CDATA[[NAME]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([SCALERANK] &lt;= 5)</Filter>
+    <MarkersSymbolizer fill="#f6d58c" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer face-name="Avenir Next Condensed Medium" fill="#f6d58c" halo-fill="#161616" allow-overlap="false" halo-radius="1.2" dx="6" spacing="4" placement="point" placement-type="simple" placements="NE,E,SE,NW,W,SW,N,S" ><![CDATA[[NAME]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([SCALERANK] &lt;= 7)</Filter>
+    <MarkersSymbolizer fill="#f6d58c" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer face-name="Avenir Next Condensed Medium" fill="#f6d58c" halo-fill="#161616" allow-overlap="false" halo-radius="1.2" dx="6" spacing="4" placement="point" placement-type="simple" placements="NE,E,SE,NW,W,SW,N,S" ><![CDATA[[NAME]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([SCALERANK] &lt;= 7)</Filter>
+    <MarkersSymbolizer fill="#f6d58c" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer face-name="Avenir Next Condensed Medium" fill="#f6d58c" halo-fill="#161616" allow-overlap="false" halo-radius="1.2" dx="6" spacing="4" placement="point" placement-type="simple" placements="NE,E,SE,NW,W,SW,N,S" ><![CDATA[[NAME]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([SCALERANK] &lt;= 99)</Filter>
+    <MarkersSymbolizer fill="#f6d58c" stroke="#161616" allow-overlap="false" />
+    <TextSymbolizer face-name="Avenir Next Condensed Medium" fill="#f6d58c" halo-fill="#161616" allow-overlap="false" halo-radius="1.2" dx="6" spacing="4" placement="point" placement-type="simple" placements="NE,E,SE,NW,W,SW,N,S" ><![CDATA[[NAME]]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Style name="places-marker" filter-mode="first" >
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([ADM0CAP] = 1) and ([WORLDCITY] = 0) and ([MEGACITY] = 0)</Filter>
+    <MarkersSymbolizer width="6" fill="#f6d58c" stroke="#161616" allow-overlap="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([ADM0CAP] = 1) and ([WORLDCITY] = 0) and ([MEGACITY] = 1)</Filter>
+    <MarkersSymbolizer width="7" fill="#f6d58c" stroke="#161616" allow-overlap="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([ADM0CAP] = 1) and ([WORLDCITY] = 1)</Filter>
+    <MarkersSymbolizer width="8" fill="#f6d58c" stroke="#161616" allow-overlap="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([ADM0CAP] = 1)</Filter>
+    <MarkersSymbolizer fill="#f6d58c" stroke="#161616" allow-overlap="false" />
+  </Rule>
+</Style>
+<Layer name="places"
+  srs="+proj=longlat +ellps=WGS84 +no_defs">
+    <StyleName>places-marker</StyleName>
+    <StyleName>places</StyleName>
+    <StyleName>places-label</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/MarbleLabel/layers/places/populated_places_ordered.shp]]></Parameter>
+       <Parameter name="id"><![CDATA[places]]></Parameter>
+       <Parameter name="project"><![CDATA[MarbleLabel]]></Parameter>
+       <Parameter name="srs"><![CDATA[]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="roads" filter-mode="first" >
+  <Rule>
+    <LineSymbolizer stroke-width="1" stroke="#116688" />
+  </Rule>
+</Style>
+<Layer name="roads"
+  status="off"
+  srs="+proj=longlat +ellps=WGS84 +no_defs">
+    <StyleName>roads</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/MarbleLabel/layers/roads/ne_10m_roads.shp]]></Parameter>
+       <Parameter name="id"><![CDATA[roads]]></Parameter>
+       <Parameter name="project"><![CDATA[MarbleLabel]]></Parameter>
+       <Parameter name="srs"><![CDATA[]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="ne10mrailroads" filter-mode="first" >
+  <Rule>
+    <LineSymbolizer stroke-width="1" stroke="#ff00ff" />
+  </Rule>
+</Style>
+<Layer name="ne10mrailroads"
+  status="off"
+  srs="+proj=longlat +ellps=WGS84 +no_defs">
+    <StyleName>ne10mrailroads</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/MarbleLabel/layers/ne10mrailroads/ne_10m_railroads.shp]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+</Map>

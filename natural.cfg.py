@@ -1,17 +1,18 @@
 import os
 
-zfactor=24 # Reduce this when using high resolution data!
-azimuth=345
+zfactor=20 # Reduce this when using high resolution data!
+azimuth=315
 
 datadir = '/Users/Kotaimen/proj/geodata'
 themedir= './themes/bathymetry'
 cachedir= os.path.join(themedir, 'cache')
-tag = 'BlueMarble_June'
+tag = 'NaturalEarthII'
 
-marble = dict(\
+natural = dict(\
     prototype='datasource.dataset',
-    dataset_path=os.path.join(datadir, 'BlueMarble/bathy.200406.tif'),
-    )
+#      dataset_path=os.path.join(datadir, 'natural-earth-2.0b3/raster/HYP_HR/HYP_HR_tiled.tif'),    
+      dataset_path=os.path.join(datadir, 'natural-earth-2.0b3/raster/NE2_HR_LC/NE2_HR_LC.tiled.tif'),    
+)
 
 
 land_mask = dict(\
@@ -19,7 +20,7 @@ land_mask = dict(\
     theme=os.path.join(themedir, 'land_mask.xml'),
     image_type='png',
     buffer_size=0,
-    )
+)
 
 elevation = dict(\
     prototype='datasource.dataset',
@@ -29,7 +30,7 @@ elevation = dict(\
         compress=True,
         data_format='gtiff',
         ),
-    )
+)
 
 bathymetry = dict(\
     prototype='processing.colorrelief',
@@ -63,7 +64,13 @@ specular = dict(\
     altitude=90,
     azimuth=azimuth,
     )
-
+    
+waterbody = dict(\
+    prototype='datasource.mapnik',
+    theme=os.path.join(themedir, 'waterbody.xml'),
+    image_type='png',
+    buffer_size=0,
+    )
 
 composer=dict(\
     prototype='composite.imagemagick',
@@ -71,7 +78,7 @@ composer=dict(\
                root=os.path.join(cachedir, '%s' % tag),
                data_format='jpg',
                ),                  
-    sources=['diffuse', 'detail', 'specular', 'marble'],
+    sources=['diffuse', 'detail', 'specular', 'natural', 'bathymetry', 'land_mask', 'waterbody'],
     format='jpg',
     command='''   
     (
@@ -83,10 +90,12 @@ composer=dict(\
         -gamma 0.8
     )
     (   
-
-        ( $4 -gamma 2.2 -gaussian-blur 0x0.4 ) 
+        $5
+        ( $4 -gamma 0.7 ) 
+        $6 -compose over -composite 
     ) -compose overlay -composite
-    -quality 85
+    $7 -compose over -composite
+    -quality 90
     '''
     )
 
@@ -94,14 +103,18 @@ ROOT = dict(\
     renderer='composer',
     metadata=dict(tag=tag,
                   version='1.0',
-                  description='NASA Blue Marbels with Bathymetry and Shaded Relief',
+                  description='Natural Earth II with Bathymetry and Shaded Relief',
                   attribution='',
                   ),
     cache=dict(prototype='filesystem',
                root=os.path.join(cachedir, 'export', '%s' % tag),
                data_format='jpg',
                simple=True
-               ),                  
+              ),
+#    cache=dict(prototype='mbtiles',
+#               database=os.path.join(cachedir, 'export', '%s.mbtiles' % tag),
+#               data_format='jpg',
+#               ),                            
     pyramid=dict(levels=range(2, 9),
                  envelope=(-180,-85,180,85),
                  zoom=5,
