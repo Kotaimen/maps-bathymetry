@@ -90,8 +90,10 @@ composer=dict(\
         -gamma 0.8
     )
     (   
-        $5
-        ( $4 -gamma 0.7 ) 
+        ( $5 -modulate 95,105,96 )
+#        ( $5 -modulate 85,75,103 )
+        ( $4 -gamma 0.65 -brightness-contrast -9%x-4% -modulate 100,90,100 )
+#        ( $4 -gamma 0.7 )  
         $6 -compose over -composite 
     ) -compose overlay -composite
     $7 -compose over -composite
@@ -115,11 +117,12 @@ ROOT = dict(\
 #               database=os.path.join(cachedir, 'export', '%s.mbtiles' % tag),
 #               data_format='jpg',
 #               ),                            
-    pyramid=dict(levels=range(2, 9),
+    pyramid=dict(levels=range(2, 8),
                  envelope=(-180,-85,180,85),
                  zoom=5,
                  center=(100, 30),
                  format='jpg',
                  buffer=8,
+                 tile_size=256,
                  ),
 )
